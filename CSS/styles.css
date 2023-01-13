@@ -1,0 +1,241 @@
+body {
+  background: #eee;
+  color: #000;
+  max-width: 1360px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  margin: 0px auto;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+.mega-mart {
+  width: 100%;
+}
+
+.mega-mart header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0px 15px 10px -15px rgba(66, 65, 65, 0.418);
+}
+
+.mega-mart header .logo {
+  max-width: 150px;
+}
+
+.mega-mart header ul {
+  display: flex;
+}
+
+.mega-mart header ul li {
+  list-style: none;
+  padding: 12px 22px;
+}
+
+.mega-mart header ul li:hover {
+  background: #ad82ff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+}
+
+.mega-mart header ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mega-mart header ul li:hover a {
+  color: #fff;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.banner-container #leftArr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 2px;
+  padding-top: 8%;
+  font-size: 7rem;
+  background: rgba(0, 0, 0, 0.147);
+  cursor: pointer;
+}
+
+.banner-container #RightArr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 2px;
+  padding-top: 8%;
+  font-size: 7rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.147);
+}
+
+.banner-container #bannerImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.main-section {
+  padding: 2rem 4rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-list .product {
+  width: 250px;
+  list-style: none;
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.product-list .product img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.product-list .product .title-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 0px;
+  padding: 4px 0px;
+}
+
+.product-list .product .desc-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-list .product .desc-container .desc-section .desc {
+  font-size: 12px;
+  color: #333;
+  margin: 0px;
+  padding: 4px 0px;
+}
+
+.product-list .product .desc-container .desc-section .rating {
+  width: 40%;
+  padding: 4px 0px;
+}
+
+.product-list .product .price {
+  font-weight: 600;
+}
+
+.product-list .product .addToCart button {
+  background: #ad82ff;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 1rem auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content .product-list {
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-content .product-list .product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0rem;
+  padding: 1rem;
+}
+
+.modal-content .product-list .product:hover {
+  background: #eee;
+}
+
+.modal-content .product-list .product .image {
+  width: 100px;
+}
+
+.modal-content .product-list .product .info {
+  width: 70%;
+}
+.modal-content .product-list .product .info .title {
+  font-size: 13px;
+  margin: 0px;
+  padding: 4px 8px;
+}
+
+.modal-content .product-list .product .info .desc {
+  font-size: 12px;
+  margin: 0px;
+  padding: 4px 8px;
+  color: #222;
+}
+.modal-content .product-list .product .info .price {
+  margin: 0px;
+  padding: 4px 8px;
+  color: #222;
+}
