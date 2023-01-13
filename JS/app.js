@@ -5,6 +5,7 @@ let modal = document.getElementById('myModal');
 let btn = document.getElementById('myBtn');
 let span = document.getElementsByClassName('close')[0];
 let cartItemsRef = document.getElementById('cartItems');
+let totalPriceRef = document.getElementById('totalPrice');
 
 let apiKey = '156fc1cbb7msh6a09f6c30732e6fp18eb6fjsnc25b04a66295';
 let domain = 'https://asos2.p.rapidapi.com/';
@@ -138,7 +139,9 @@ window.onclick = function (event) {
 };
 
 function generateCardUI() {
-  cartItemsRef.innerHTML = '';
+  cartItemsRef.innerHTML = !cartItems.length
+    ? `<span>Please add items in your cart</span>`
+    : '';
   cartItems.forEach((element, i) => {
     cartItemsRef.innerHTML += `<li class="product">
     <div class="image">
@@ -150,6 +153,16 @@ function generateCardUI() {
         <div class="price">${element.price.current.text}</div>
     </div>
     <div class="remove" onclick= "clearCartItem(${i})">x</div>
-</li>`;
+  </li>`;
   });
+  totalCartPrice();
+}
+
+function totalCartPrice() {
+  totalPriceRef.innerHTML = '$0';
+  let totalCount = 0;
+  cartItems.forEach((element, i) => {
+    totalCount += element.price.current.value;
+  });
+  totalPriceRef.innerHTML = '$' + totalCount;
 }
